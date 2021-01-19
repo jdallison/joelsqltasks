@@ -1,0 +1,15 @@
+1 - SELECT COUNT(ID) FROM city WHERE CountryCode = 'USA';
+
+2 - SELECT Population, LifeExpectancy FROM country WHERE `Code` = 'ARG';
+
+3 - SELECT MAX(LifeExpectancy) LifeExpectancy FROM country WHERE LifeExpectancy IS NOT NULL LIMIT 1;
+
+4 - SELECT country.Capital, city.`name` FROM country INNER JOIN city ON country.Capital = city.ID WHERE `Code` = 'ESP';
+
+5 - SELECT countrylanguage.`Language` FROM countrylanguage INNER JOIN country ON countrylanguage.CountryCode = country.`Code` WHERE country.Region = 'Southeast Asia';
+
+6 - SELECT `Name` FROM city WHERE `Name` LIKE 'F%' LIMIT 25;
+
+7 - SELECT COUNT(city.ID) FROM city INNER JOIN country ON city.CountryCode = country.`Code` WHERE country.`Name` = 'China';
+
+(NOT YET WORKING) 8 - SELECT `Name`, Population FROM country WHERE Population ORDER BY Population IS NOT NULL LIMIT 1;
